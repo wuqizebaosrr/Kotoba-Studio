@@ -1,0 +1,24 @@
+name: Build Windows
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run test:desktop
+      - run: npm run build:windows
+      - uses: actions/upload-artifact@v7
+        with:
+          name: Kotoba-Studio-Windows-x64
+          path: releases/*-Windows-x64-Setup.exe
+          if-no-files-found: error

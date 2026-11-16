@@ -1,0 +1,2 @@
+const {contextBridge,ipcRenderer}=require('electron');
+contextBridge.exposeInMainWorld('gameNative',{quit:()=>ipcRenderer.send('game-exit'),readSettings:()=>ipcRenderer.sendSync('game-read-settings'),writeSettings:text=>ipcRenderer.sendSync('game-write-settings',text),readSlots:()=>ipcRenderer.sendSync('game-read-slots'),writeSlots:text=>ipcRenderer.sendSync('game-write-slots',text),onMenu:callback=>ipcRenderer.on('game-menu',(_e,command)=>callback(command))});

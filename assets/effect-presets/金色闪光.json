@@ -1,0 +1,11 @@
+{
+  "format": "kotoba-effect",
+  "version": 1,
+  "settings": {
+    "effect": "flash",
+    "duration": 700,
+    "intensity": 75,
+    "color": "#ffd78c",
+    "advance": "click"
+  }
+}

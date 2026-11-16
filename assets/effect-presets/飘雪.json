@@ -1,0 +1,11 @@
+{
+  "format": "kotoba-effect",
+  "version": 1,
+  "settings": {
+    "effect": "snow",
+    "duration": 3000,
+    "intensity": 65,
+    "color": "#ffffff",
+    "advance": "click"
+  }
+}

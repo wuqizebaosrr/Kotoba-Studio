@@ -1,0 +1,11 @@
+{
+  "format": "kotoba-effect",
+  "version": 1,
+  "settings": {
+    "effect": "rain",
+    "duration": 3000,
+    "intensity": 55,
+    "color": "#d5edff",
+    "advance": "click"
+  }
+}

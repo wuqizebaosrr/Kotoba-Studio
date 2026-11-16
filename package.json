@@ -1,0 +1,32 @@
+{
+  "name": "kotoba-studio",
+  "productName": "Kotoba Studio",
+  "version": "0.9.3",
+  "description": "Windows 桌面 Galgame 制作工作台",
+  "main": "desktop/main.cjs",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "check": "node scripts/check.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "test:desktop": "node scripts/desktop-check.cjs",
+    "build:windows": "node desktop/package-workbench.cjs",
+    "scan:public": "node scripts/scan-public.cjs",
+    "prepare:upload": "node scripts/prepare-upload.cjs"
+  },
+  "devDependencies": {
+    "electron": "44.9.0"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuqizebaosrr/Kotoba-Studio.git"
+  },
+  "homepage": "https://github.com/wuqizebaosrr/Kotoba-Studio",
+  "bugs": {
+    "url": "https://github.com/wuqizebaosrr/Kotoba-Studio/issues"
+  }
+}
